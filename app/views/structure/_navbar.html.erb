@@ -1,6 +1,10 @@
-<div class="nav">
-  <div class="container">
-    <ul class="pull-left">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
       <li>My Work</li>
       <li>About Me</li>
       <li><%= link_to "My Blog", "https://lionlies.github.io", target: "_blank" %></li>
@@ -10,9 +14,9 @@
         <% end %>
       </li>
     </ul>
-    <ul class="pull-right">
+    <ul class="nav navbar-nav pull-right">
       <li><%= link_to "Resume", "https://drive.google.com/file/d/0B3LpHVXagwo5eHNtOWtoSmIwTEE/view?usp=sharing", target: "_blank" %></li>
       <li><%= link_to "Contact Me", "#" %></li>
     </ul>
   </div>
-</div>
+</nav>
