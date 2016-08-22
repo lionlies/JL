@@ -4,9 +4,8 @@
       <a class="navbar-brand" href="#"></a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li>My Work</li>
-      <li>About Me</li>
+      <li><%= link_to "My Work", "/#mywork" %></li>
+      <li><%= link_to "About Me", "/#aboutme" %></li>
       <li><%= link_to "My Blog", "https://lionlies.github.io", target: "_blank" %></li>
       <li>
         <%= link_to "https://github.com/lionlies", target: "_blank" do %>
@@ -16,7 +15,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><%= link_to "Resume", "https://drive.google.com/file/d/0B3LpHVXagwo5eHNtOWtoSmIwTEE/view?usp=sharing", target: "_blank" %></li>
-      <li><%= link_to "Contact Me", "#" %></li>
+      <li><%= mail_to  "lionlies@gmail.com", "Contact Me" %></li>
     </ul>
   </div>
 </nav>
