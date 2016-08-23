@@ -8,3 +8,12 @@
  @import "home.scss";
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+
+/* bootstrap navbar height */
+ .navbar-nav > li > a, navbar-brand {
+   padding-top:1px !important;
+   padding-bottom:0px !important;
+   height: 20px;
+ }
+ .navbar {min-height:20px !important}
