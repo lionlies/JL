@@ -1,21 +1,33 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">6unlung</a>
+
+    <div class="navbar-brand" href = "/">6unlung</div>
+
+    <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <div class = "collapse navbar-collapse navHeaderCollapse">
+
+      <ul class="nav navbar-nav">
+        <li><%= link_to "My Work", "/#mywork" %></li>
+        <li><%= link_to "About Me", "/#aboutme" %></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "My Blog", "https://lionlies.github.io", target: "_blank" %></li>
+        <li>
+          <%= link_to "https://github.com/lionlies", target: "_blank" do %>
+            <i class="fa fa-github-alt fa-lg" aria-hidden="true"></i>
+          <% end %>
+        </li>
+        <li><%= link_to "Resume", "https://drive.google.com/file/d/0B3LpHVXagwo5eHNtOWtoSmIwTEE/view?usp=sharing", target: "_blank" %></li>
+        <li><%= mail_to "lionlies@gmail.com", "Contact Me" %></li>
+      </ul>
+
     </div>
-    <ul class="nav navbar-nav">
-      <li><%= link_to "My Work", "/#mywork" %></li>
-      <li><%= link_to "About Me", "/#aboutme" %></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "My Blog", "https://lionlies.github.io", target: "_blank" %></li>
-      <li>
-        <%= link_to "https://github.com/lionlies", target: "_blank" do %>
-          <i class="fa fa-github-alt fa-lg" aria-hidden="true"></i>
-        <% end %>
-      </li>
-      <li><%= link_to "Resume", "https://drive.google.com/file/d/0B3LpHVXagwo5eHNtOWtoSmIwTEE/view?usp=sharing", target: "_blank" %></li>
-      <li><%= mail_to "lionlies@gmail.com", "Contact Me" %></li>
-    </ul>
+
   </div>
 </nav>
