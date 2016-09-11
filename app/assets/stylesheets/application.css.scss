@@ -11,13 +11,14 @@
 
 
 /* bootstrap navbar height */
- .navbar-nav > li > a, navbar-brand {
-   padding-top:1px !important;
-   padding-bottom:0px !important;
-   height: 20px;
- }
- .navbar {min-height:20px !important}
+.navbar-nav > li > a, navbar-brand {
+  padding-top:1px !important;
+  padding-bottom:0px !important;
+  height: 20px;
+}
+
+.navbar {min-height:20px !important}
 
 .anchor {
-   padding-top: 90px;
+  padding-top: 90px;
 }

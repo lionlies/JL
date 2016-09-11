@@ -1,8 +1,8 @@
-<div class="jumbotron">
+<div id="jumbotron">
   <div class="container">
     <h1>Hi, it's Jason!</h1>
-    <p>Rent from people in over 34,000 cities and 192 countries.</p>
-    <a href="#">Learn More</a>
+    <p>I love making stuff</p>
+    <%= link_to "My Work", "/#mywork" %>
   </div>
 </div>
 
@@ -13,24 +13,21 @@
   </div>
   <br>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
       <div class="thumbnail">
-        <%= link_to "https://google.com", target: "_blank" do %>
-          <%= image_tag "qingshi-snap.png" %>
+        <%= link_to "https://qingshi.herokuapp.com/", target: "_blank" do %>
+          <%= image_tag "https://c1.staticflickr.com/9/8072/29521837551_dc4f4faba9_c.jpg" %>
         <% end %>
       </div>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis unde, ipsum voluptatum deleniti architecto? Illum hic excepturi nesciunt aperiam sint recusandae omnis, itaque qui, atque accusamus iste dolorem, fugit laudantium?</p>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
       <div class="thumbnail">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Mt_Dabajian-winter_view.jpg">
+        <%= link_to "http://ideahuntx.herokuapp.com/", target: "_blank" do %>
+          <%= image_tag "https://c1.staticflickr.com/9/8483/29473306612_5cd44b62df_c.jpg" %>
+        <% end %>
       </div>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt corporis ea porro perspiciatis repudiandae esse tenetur sed praesentium, quia illum soluta, odio dolorum a, consequatur et sunt consectetur fuga.</p>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <img src="http://goo.gl/0Kd7UO">
-      </div>
     </div>
   </div>
 </div>
