@@ -42,14 +42,23 @@
   padding-top: 20px;
   h2 {
     text-align: center;
-    color:#393c3d;
-    font-size:24px;
+    color: #393c3d;
+    font-size: 24px;
+    font-family:'Shift', sans-serif;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+
+  h4 {
+    color: #506F8C;
   }
 
   p {
-    text-align: center;
     font-size:15px;
     margin-bottom:13px;
+  }
+  strong {
+    color: #00b0ff;
   }
 }
 
@@ -57,14 +66,38 @@
   background-color:#f7f7f7;
   border-bottom:1px solid #dbdbdb;
   padding-top: 20px;
-  h3 {
+
+  h2 {
+    color: #506F8C;
+    text-align: center;
     font-family:'Shift', sans-serif;
-    font-size:18px;
+    font-size:24px;
     font-weight:bold;
     padding-bottom: 10px;
   }
 
-  a {
-    color:#00b0ff;
+  h5 {
+    font-size: 16px;
+    font-weight: bold;
   }
+
+  p {
+    line-height: 200%;
+    text-indent: 30px;
+  }
+
+  #footer_contact_me {
+    color: #506F8C;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
+#down_arrow {
+  text-align: center;
+}
+
+.text-align-center {
+  text-align: center;
 }

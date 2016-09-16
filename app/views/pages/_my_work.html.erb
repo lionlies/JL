@@ -1,0 +1,77 @@
+<div class="my-work">
+
+  <div class="container">
+    <h2><a id="my_work" class="anchor">My Work</a></h2>
+    <p class="text-align-center">點選網站圖片可開啟新視窗連往該網站</p>
+  </div>
+
+  <br>
+
+  <div class="row">
+
+    <div class="col-md-6">
+      <div class="thumbnail">
+        <%= link_to "https://qingshi.herokuapp.com/", target: "_blank" do %>
+          <%= image_tag "https://c1.staticflickr.com/9/8072/29521837551_dc4f4faba9_c.jpg" %>
+        <% end %>
+      </div>
+      <div class="col-md-7">
+        <h4>簡。輕食</h4>
+        <p>一個電商網站，使用者可以註冊帳號、用臉書登入、瀏覽選購商品、加入購物車、結帳。</p>
+        <p>結帳時，系統先建立訂單，再透過智付寶讓使用者選擇以 ATM 或信用卡付款。</p>
+        <p>付款後，系統透過 Mailgun 發送訂單通知信給使用者；如果系統負載較大，
+           則透過 delayed_job 延後發信。</p>
+        <p>AASM 設定了"已下單"、"已付款"、"已出貨"、"已到貨"、"取消訂單"、"已退貨"。
+          "已下單" 和 "已付款"會在下單和結帳流程中自動切換。</p>
+      </div>
+      <div class="col-md-5">
+        <h4>主要技術</h4>
+        <p>
+          。<strong>jQuery</strong><br>
+          。用 <strong>CarrierWace</strong> 上傳圖片<br>
+          。圖片儲存於 <strong>AWS S3</strong><br>
+          。<strong>Facebook Login</strong><br>
+          。<strong>AASM</strong> 狀態機<br>
+          。<strong>購物車</strong>系統<br>
+          。接<strong>第三方支付</strong>（智付寶） <br>
+          。用 <strong>Mailgun</strong> 寄信 <br>
+          。用 <strong>Delayed_job</strong> 排程<br>
+          。用 <strong>figaro</strong> 管理機密資訊 <br>
+          。用 <strong>i18n</strong> 做多語系版本 <br>
+          。用 <strong>UUID</strong> 隱藏網址<br>
+          。Ruby 2.2.4 / Rails 4.2.7 <br>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="col-md-6">
+      <div class="thumbnail">
+        <%= link_to "http://ideahuntx.herokuapp.com/", target: "_blank" do %>
+          <%= image_tag "https://c1.staticflickr.com/9/8483/29473306612_5cd44b62df_c.jpg" %>
+        <% end %>
+      </div>
+
+      <div class="col-md-7">
+        <h4>Idea Hunt</h4>
+        <p>使用者可以丟點子上去、並進行 CRUD 操作、其他人可以投票、留言討論的平台。</p>
+        <p>點子提供者可以對點子加上標籤，標籤出現在標籤雲中，次數較多的標籤會顯示得比較大。</p>
+        <p>每位使用者只能對一個點子投一票，點子依照得票數排序。</p>
+        <p>留言板用 Disqus，點進個別的點子頁面後，下方有留言討論區。</p>
+      </div>
+
+      <div class="col-md-5">
+        <h4>主要技術</h4>
+        <p>
+          。<strong>Bootstrap</strong><br>
+          。<strong>Font-Awesome</strong> <br>
+          。<strong>Polymorphic associations</strong> 實作 <strong>Favoriting</strong> System<br>
+          。<strong>Tagging</strong> System 實作<br>
+          。接 <strong>Disqus</strong> 留言板 <br>
+          。<strong>社群分享按鈕</strong> <br>
+          。Ruby 2.3.1 / Rails 5.0.0.1 <br>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
