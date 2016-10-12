@@ -2,7 +2,7 @@
 
   <div class="container">
     <h2><a id="my_work" class="anchor">My Work</a></h2>
-    <b><p class="text-align-center">點選網站圖片可開啟新視窗連往該網站</p></b>
+    <b><p class="text-align-center">Click on a website picture down below to go to the website in a new tab</p></b>
   </div>
 
   <br>
@@ -15,30 +15,30 @@
           <%= image_tag "https://c1.staticflickr.com/9/8072/29521837551_dc4f4faba9_c.jpg" %>
         <% end %>
       </div>
-      <div class="col-md-7">
-        <h4>簡。輕食</h4>
-        <p>一個電商網站，使用者可以註冊帳號、用臉書登入、瀏覽選購商品、加入購物車、結帳。</p>
-        <p>結帳時，系統先建立訂單，再透過智付寶讓使用者選擇以 ATM 或信用卡付款。</p>
-        <p>付款後，系統透過 Mailgun 發送訂單通知信給使用者；如果系統負載較大，
-           則透過 delayed_job 延後發信。</p>
-        <p>AASM 設定了"已下單"、"已付款"、"已出貨"、"已到貨"、"取消訂單"、"已退貨"。
-          "已下單" 和 "已付款"會在下單和結帳流程中自動切換。</p>
+      <div class="col-md-offset-1">
+        <h4><%= link_to "簡。輕食", "https://qingshi.herokuapp.com/", target: "_blank" %></h4>
+        <p>It's an E-Commerce website, an user can register an account, log in with Facebook, browse products, add products to shopping cart, and checkout.</p>
+        <p>While checking out, system will build an order, then user can pay with the options of ATM, Credit Card via <%= link_to "Pay2Go", "https://qingshi.herokuapp.com/", target: "_blank" %> service. </p>
+        <p>After checkout, system will automatically send an email to notice the user via <%= link_to "Mailgun", "http://www.mailgun.com/", target: "_blank" %> service.
+           If system loading is too heavy, it'll defer the job with the use of <%= link_to "delayed_job", "https://github.com/collectiveidea/delayed_job", target: "_blank" %></p>
+        <p><%= link_to "AASM", "https://github.com/aasm/aasm", target: "_blank" %> state machine has steps of "Ordered", "Paid", "Shipping", "Shipped", "Order Cancelled", and "Returned".
+          The steps of "Ordered" and "Paid" will be switched automatically with the power of state machine. </p>
       </div>
-      <div class="col-md-5">
-        <h4>主要技術</h4>
+      <div class="col-md-offset-1">
+        <h4>Core Tech</h4>
         <p>
-          。<strong>jQuery</strong><br>
-          。用 <strong>CarrierWace</strong> 上傳圖片<br>
-          。圖片儲存於 <strong>AWS S3</strong><br>
-          。<strong>Facebook Login</strong><br>
-          。<strong>AASM</strong> 狀態機<br>
-          。<strong>購物車</strong>系統<br>
-          。接<strong>第三方支付</strong>（智付寶） <br>
-          。用 <strong>Mailgun</strong> 寄信 <br>
-          。用 <strong>Delayed_job</strong> 排程<br>
-          。用 <strong>figaro</strong> 管理機密資訊 <br>
-          。用 <strong>i18n</strong> 做多語系版本 <br>
-          。用 <strong>UUID</strong> 隱藏網址<br>
+          。<%= link_to "jQuery", "https://jquery.com/", target: "_blank" %><br>
+          。Use <%= link_to "CarrierWave", "https://github.com/carrierwaveuploader/carrierwave", target: "_blank" %> to upload product images.<br>
+          。Product images are stored on <%= link_to "AWS S3", "https://aws.amazon.com/s3", target: "_blank" %><br>
+          。<%= link_to "Facebook Login", "https://developers.facebook.com/products/login", target: "_blank" %><br>
+          。<%= link_to "AASM", "https://github.com/aasm/aasm", target: "_blank" %> state machine<br>
+          。E-Commerce shopping cart system<br>
+          。 <%= link_to "Paying System(Pay2go)", "https://www.pay2go.com/", target: "_blank" %> <br>
+          。Send emails with <%= link_to "Mailgun", "http://www.mailgun.com/", target: "_blank" %><br>
+          。Use <%= link_to "Delayed_job", "https://github.com/collectiveidea/delayed_job", target: "_blank" %> to do scheduling<br>
+          。Use <%= link_to "figaro", "https://github.com/laserlemon/figaro", target: "_blank" %> to manage confidential information<br>
+          。Do internationalization with <%= link_to "i18n", "http://guides.rubyonrails.org/i18n.html", target: "_blank" %> <br>
+          。Use <%= link_to "UUID(SecureRandom)", "https://ruby-doc.org/stdlib-2.2.3/libdoc/securerandom/rdoc/SecureRandom.html", target: "_blank" %> to create random url<br>
           。Ruby 2.2.4 / Rails 4.2.7 <br>
         </p>
       </div>
@@ -52,23 +52,23 @@
         <% end %>
       </div>
 
-      <div class="col-md-7">
-        <h4>Idea Hunt</h4>
-        <p>使用者可以丟點子上去、並進行 CRUD 操作、其他人可以投票、留言討論的平台。</p>
-        <p>點子提供者可以對點子加上標籤，標籤出現在標籤雲中，次數較多的標籤會顯示得比較大。</p>
-        <p>每位使用者只能對一個點子投一票，點子依照得票數排序。</p>
-        <p>留言板用 Disqus，點進個別的點子頁面後，下方有留言討論區。</p>
+      <div>
+        <h4><%= link_to "Idea Hunt", "http://ideahuntx.herokuapp.com/", target: "_blank" %></h4>
+        <p>Idea hunt is a platform for users to publish ideas and discuss with users. Each user can also manage his/her own ideas, read others' ideas, vote for an idea, and leave comments under each idea.</p>
+        <p>Idea owners can add tags to each of their ideas, tags will show up in tag cloud. More populer tags will have bigger clouds.</p>
+        <p>Each user have only one vote for each idea, ideas sort in the number of votes.</p>
+        <p>The comment system is built with <%= link_to "Disqus", "http://Disqus.com/", target: "_blank" %></p>
       </div>
-
-      <div class="col-md-5">
-        <h4>主要技術</h4>
+      <br>
+      <div>
+        <h4>Core Tech</h4>
         <p>
-          。<strong>Bootstrap</strong><br>
-          。<strong>Font-Awesome</strong> <br>
-          。<strong>Polymorphic associations</strong> 實作 <strong>Favoriting</strong> System<br>
-          。<strong>Tagging</strong> System 實作<br>
-          。接 <strong>Disqus</strong> 留言板 <br>
-          。<strong>社群分享按鈕</strong> <br>
+          。<%= link_to "Bootstrap", "http://getbootstrap.com/", target: "_blank" %><br>
+          。<%= link_to "Font-Awesome", "https://github.com/bokmann/font-awesome-rails", target: "_blank" %> <br>
+          。The voting system is built in the concept of <%= link_to "Rails Polymorphic associations", "http://guides.rubyonrails.org/association_basics.html#polymorphic-associations", target: "_blank" %><br>
+          。<%= link_to "Tagging System", "https://github.com/mbleigh/acts-as-taggable-on", target: "_blank" %> <br>
+          。<%= link_to "Disqus", "https://disqus.com/", target: "_blank" %> comment system <br>
+          。<%= link_to "Social Sharing", "https://github.com/huacnlee/social-share-button", target: "_blank" %> <br>
           。Ruby 2.3.1 / Rails 5.0.0.1 <br>
         </p>
       </div>
